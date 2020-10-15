@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="author" content="Michael Smith"/>
+		<title>Movinator</title>
+		<link href="css/discoverStyle.css" type="text/css" rel="stylesheet"/>
+		<script src="js/discoverScript.js"></script>
+	</head>
+	<body onload="retrieveMovie('Bird Box', 'birdBox');
+				  retrieveMovie('Shutter Island', 'shutterIsland');
+				  retrieveMovie('Avatar', 'avatar');
+				  retrieveMovie('Black Panther', 'blackPanther');
+				  retrieveMovie('Bohemian Rhapsody', 'bohemianRhapsody');
+				  retrieveMovie('Get Out', 'getOut');
+				  retrieveMovie('Deadpool', 'deadpool');
+				  retrieveMovie('Interstellar', 'interstellar');
+				  retrieveMovie('Forrest Gump', 'forrestGump');
+				  retrieveMovie('Inception', 'inception');
+				  loadDone()">
+		<div id="header">
+			<div id="logoDiv">
+				<a href="../index.html">
+					<img id="logo" src="images/logo.png" alt="image"/>
+				</a>
+			</div>
+		</div>
+		<nav>	
+			<ul>
+				<li><a href="discover.html" id="current">Discover</a></li>
+				<li><a href="featured.html">Featured</a></li>
+				<li><a href="topRated.html">Top Rated</a></li>
+				<li><a href="latest.html">Latest</a></li>
+				<li><a href="calendar.html">Calendar</a></li>
+			</ul>
+		</nav>
+		<div class="filter">
+			<button class="filterButton">Filter &dArr;</button>
+			<div class="filters">
+				<div class="filterType" onclick="filterNone()">None</div>
+				<div class="filterType" onclick="filterPG13()">PG-13</div>
+				<div class="filterType" onclick="filterR()">R</div>
+			</div>
+		</div>
+		<form>
+			<input id="findMovie" type="text" placeholder="Search"/>
+			<button type="button" onclick="find()"><img class="searchIcon" src="images/searchIcon.png" alt="image"/></button>
+		</form>
+		<div id="loading" style="text-align:center; padding-top: 100px;"><img alt="loading" src="images/loading.gif"/></div>
+		<div class="movieBlocks" id="movieBlocks">
+			<div class="movieBlock" id="birdBox">
+				<img class="movieImage" src="images/birdBox.jpg" alt="image" id="birdBoxImage"/>
+				<div class="movieData">
+					<div class="movieTitle" id="birdBoxTitle">
+						
+					</div>
+					<hr/>
+					<div class="ageAndRelease" id="birdBoxAgeAndRelease">
+						
+					</div>
+					<div class="description" id="birdBoxDescription">
+						
+					</div>
+					<div class="myRating" id="birdBoxMyRating">
+						&#9733; 7.7
+					</div>
+					<div class="imdbRating" id="birdBoxImdbRating">
+						
+					</div>
+				</div>
+			</div>
+			<div class="movieBlock" id="shutterIsland">
+				<img class="movieImage" src="images/shutterIsland.jpg" alt="image" id="shutterIslandImage"/>
+				<div class="movieData">
+					<div class="movieTitle" id="shutterIslandTitle">
+					
+					</div>
+					<hr/>
+					<div class="ageAndRelease" id="shutterIslandAgeAndRelease">
+					</div>
+					<div class="description" id="shutterIslandDescription">
+					
+					</div>
+					<div class="myRating" id="shutterIslandMyRating">
+						&#9733; 9.0
+					</div>
+					<div class="imdbRating" id="shutterIslandImdbRating">
+					</div>
+				</div>
+			</div>
+			<div class="movieBlock" id="avatar">
+				<img class="movieImage" src="images/avatar.jpg" alt="image" id="avatarImage"/>
+				<div class="movieData">
+					<div class="movieTitle" id="avatarTitle">
+					
+					</div>
+					<hr/>
+					<div class="ageAndRelease" id="avatarAgeAndRelease">
+					
+					</div>
+					<div class="description" id="avatarDescription">
+					
+					</div>
+					<div class="myRating" id="avatarMyRating">
+						&#9733; 8.2
+					</div>
+					<div class="imdbRating" id="avatarImdbRating">
+					
+					</div>
+				</div>
+			</div>
+			<div class="movieBlock" id="blackPanther">
+				<img class="movieImage" src="images/blackPanther.jpg" alt="image" id="blackPantherImage"/>
+				<div class="movieData">
+					<div class="movieTitle" id="blackPantherTitle">
+					
+					</div>
+					<hr/>
+					<div class="ageAndRelease" id="blackPantherAgeAndRelease">
+					
+					</div>
+					<div class="description" id="blackPantherDescription">
+						
+					</div>
+					<div class="myRating" id="blackPantherMyRating">
+						&#9733; 7.8
+					</div>
+					<div class="imdbRating" id="blackPantherImdbRating">
+					
+					</div>
+				</div>
+			</div>
+			<div class="movieBlock" id="inception">
+				<img class="movieImage" src="images/inception.jpg" alt="image" id="inceptionImage"/>
+				<div class="movieData">
+					<div class="movieTitle" id="inceptionTitle">
+						
+					</div>
+					<hr/>
+					<div class="ageAndRelease" id="inceptionAgeAndRelease">
+						
+					</div>
+					<div class="description" id="inceptionDescription">
+						
+					</div>
+					<div class="myRating" id="inceptionMyRating">
+						&#9733; 8.9
+					</div>
+					<div class="imdbRating" id="inceptionImdbRating">
+						
+					</div>
+				</div>
+			</div>
+			<div class="movieBlock" id="getOut">
+				<img class="movieImage" src="images/getOut.jpg" alt="image" id="getOutImage"/>
+				<div class="movieData">
+					<div class="movieTitle" id="getOutTitle">
+						
+					</div>
+					<hr/>
+					<div class="ageAndRelease" id="getOutAgeAndRelease">
+						
+					</div>
+					<div class="description" id="getOutDescription">
+						
+					</div>
+					<div class="myRating" id="getOutMyRating">
+						&#9733; 8.3
+					</div>
+					<div class="imdbRating" id="getOutImdbRating">
+						
+					</div>
+				</div>
+			</div>
+			<div class="movieBlock" id="deadpool">
+				<img class="movieImage" src="images/deadpool.jpg" alt="image" id="deadpoolImage"/>
+				<div class="movieData">
+					<div class="movieTitle" id="deadpoolTitle">
+						
+					</div>
+					<hr/>
+					<div class="ageAndRelease" id="deadpoolAgeAndRelease">
+						
+					</div>
+					<div class="description" id="deadpoolDescription">
+						
+					</div>
+					<div class="myRating" id="deadpoolMyRating">
+						&#9733; 8.1
+					</div>
+					<div class="imdbRating" id="deadpoolImdbRating">
+						
+					</div>
+				</div>
+			</div>
+			<div class="movieBlock" id="interstellar">
+				<img class="movieImage" src="images/interstellar.jpg" alt="image" id="interstellarImage"/>
+				<div class="movieData">
+					<div class="movieTitle" id="interstellarTitle">
+						
+					</div>
+					<hr/>
+					<div class="ageAndRelease" id="interstellarAgeAndRelease">
+						
+					</div>
+					<div class="description" id="interstellarDescription">
+						
+					</div>
+					<div class="myRating" id="interstellarMyRating">
+						&#9733; 8.4
+					</div>
+					<div class="imdbRating" id="interstellarImdbRating">
+						
+					</div>
+				</div>
+			</div>
+			<div class="movieBlock" id="forrestGump">
+				<img class="movieImage" src="images/forrestGump.jpg" alt="image" id="forrestGumpImage"/>
+				<div class="movieData">
+					<div class="movieTitle" id="forrestGumpTitle">
+						
+					</div>
+					<hr/>
+					<div class="ageAndRelease" id="forrestGumpAgeAndRelease">
+						
+					</div>
+					<div class="description" id="forrestGumpDescription">
+						
+					</div>
+					<div class="myRating" id="forrestGumpMyRating">
+						&#9733; 8.8
+					</div>
+					<div class="imdbRating" id="forrestGumpImdbRating">
+					
+					</div>
+				</div>
+			</div>
+			<div class="movieBlock" id="bohemianRhapsody">
+				<img class="movieImage" src="images/bohemianRhapsody.jpg" alt="image" id="bohemianRhapsodyImage"/>
+				<div class="movieData">
+					<div class="movieTitle" id="bohemianRhapsodyTitle">
+						
+					</div>
+					<hr/>
+					<div class="ageAndRelease" id="bohemianRhapsodyAgeAndRelease">
+						
+					</div>
+					<div class="description" id="bohemianRhapsodyDescription">
+						
+					</div>
+					<div class="myRating" id="bohemianRhapsodyMyRating">
+						&#9733; 8.9
+					</div>
+					<div class="imdbRating" id="bohemianRhapsodyImdbRating">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

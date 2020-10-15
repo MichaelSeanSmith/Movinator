@@ -1,0 +1,133 @@
+body
+{
+	font-family: Helvetica;
+	color: #242333;
+	padding: 0;
+	margin: 0;
+	background-color: #ffe9ad;
+}
+
+#logo
+{
+	width: 100%;
+	max-width: 700px;
+}
+
+#logoDiv
+{
+	text-align: center;
+	padding-top: 13px;
+	padding-bottom: 10px;
+}
+
+#header
+{
+	background-color: #242333;
+}
+
+ul
+{
+	background-color: #039473;
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin: 0;
+	overflow: hidden;
+}
+
+nav
+{
+	position: sticky;
+	top: 0;
+}
+
+li
+{
+	display: inline;
+	margin: 0;
+}
+
+li a
+{
+	text-decoration: none;
+	color: #242333;
+	font-weight: bold;
+	padding: 12px;
+	font-size: 18px;
+}
+
+li a:hover
+{
+	background-color: #05b38b;
+	margin: 0;
+}
+
+#current
+{
+	background-color: #ffe9ad;
+	margin: 0;
+}
+
+.movieBlocks
+{
+	padding: 30px;
+	padding-top: 0;
+	display: inline-block;
+}
+
+.movieBlock
+{
+	background-color: #ffffff;
+	width: 15%;
+	float: left;
+	margin: 30px;
+}
+
+.movieImage1
+{
+	width: 100%;
+	height: auto;
+}
+
+.movieImage2
+{
+	width: 100%;
+	height: auto;
+	display: none; 
+}
+
+.movieBlock:hover .movieImage2
+{
+	display: block;
+}
+
+.movieBlock:hover .movieImage1
+{
+	display: none;
+}
+
+.movieData
+{
+	padding: 15px;
+	text-align: center;
+}
+
+.movieTitle
+{
+	font-weight: bold;
+}
+
+.age
+{
+	font-size: 13px;
+	padding-bottom: 10px;
+}
+
+.imdbRating
+{
+	font-size: 15px;
+	padding: 5px;
+	background-color: #e6b91e;
+	color: black;
+	font-weight: bold;
+}
